@@ -1,0 +1,133 @@
+# =============================================================================
+# ARCHIVO .gitignore - Documentación de archivos temporales e ignorados
+# =============================================================================
+# Este archivo define qué archivos y directorios locales, temporales o sensibles
+# no deben ser rastreados ni subidos al repositorio de Git.
+# =============================================================================
+
+
+# -----------------------------------------------------------------------------
+# 1. IDEs y Editores de Código
+# -----------------------------------------------------------------------------
+# Archivos de configuración local del entorno de desarrollo que varían por
+# cada desarrollador y no son necesarios para ejecutar el proyecto.
+
+# JetBrains IDEs (IntelliJ IDEA, WebStorm, PyCharm, etc.)
+# Configuración local del proyecto y módulos de IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+# Directorio de salida de compilación por defecto en IntelliJ
+out/
+# Módulos adicionales generados por plugins de IntelliJ
+.idea_modules/
+
+# Visual Studio Code
+# Configuraciones locales del espacio de trabajo de VS Code
+.vscode/
+*.code-workspace
+
+# Editores de texto en terminal (Vim, Nano, Emacs, etc.)
+# Archivos de intercambio (swap) y copias de respaldo automático
+*.swp
+*.swo
+*~
+
+
+# -----------------------------------------------------------------------------
+# 2. Variables de Entorno, Secretos y Credenciales
+# -----------------------------------------------------------------------------
+# Archivos con configuraciones locales, contraseñas, tokens o llaves privadas
+# que nunca deben exponerse en el historial de control de versiones.
+
+# Variables de entorno locales (.env, .env.local, .env.development, etc.)
+.env
+.env.*
+# Excepciones: plantillas de ejemplo sin datos sensibles que sí se comparten
+!.env.example
+!.env.template
+
+# Certificados, llaves privadas y carpetas locales de credenciales
+*.pem
+*.key
+*.crt
+secrets/
+
+
+# -----------------------------------------------------------------------------
+# 3. Docker y Contenedores
+# -----------------------------------------------------------------------------
+# Archivos locales de sobrecarga o volúmenes persistentes generados durante
+# la ejecución de contenedores en el entorno local.
+
+# Sobrescrituras locales de Docker Compose para desarrollo individual
+docker-compose.override.yml
+# Configuraciones, cachés o volúmenes de datos locales montados en contenedores
+.docker/
+docker-data/
+data/
+
+
+# -----------------------------------------------------------------------------
+# 4. Registros (Logs) y Diagnósticos
+# -----------------------------------------------------------------------------
+# Archivos generados en tiempo de ejecución con trazas de eventos o errores.
+
+# Carpeta y archivos individuales de logs (debug.log, error.log, etc.)
+logs/
+*.log
+# Identificadores, semillas y archivos de bloqueo de procesos en ejecución
+*.pid
+*.seed
+*.pid.lock
+
+
+# -----------------------------------------------------------------------------
+# 5. Archivos Temporales, Caché y Respaldos
+# -----------------------------------------------------------------------------
+# Archivos de trabajo transitorios creados por aplicaciones o por el usuario.
+
+# Directorios de archivos temporales y caché general
+tmp/
+temp/
+.cache/
+
+# Archivos temporales genéricos
+*.tmp
+*.temp
+
+# Copias de seguridad (backups) locales y archivos originales de merge
+*.bak
+*.backup
+*.old
+*.orig
+
+
+# -----------------------------------------------------------------------------
+# 6. Archivos del Sistema Operativo
+# -----------------------------------------------------------------------------
+# Metadatos ocultos que los sistemas operativos crean automáticamente al
+# explorar carpetas.
+
+# Windows (cachés de miniaturas, configuración de carpetas, papelera y accesos directos)
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS (metadatos de Finder, Spotlight, resource forks y papelera)
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux (configuración de carpetas de escritorio, papelera y temporales NFS)
+.directory
+.Trash-*
+.nfs*
